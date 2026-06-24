@@ -1,0 +1,148 @@
+{
+    "asset": {
+        "generator": "Khronos glTF Blender I/O v5.1.18",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "scenes": [
+        {
+            "name": "Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "mesh": 0,
+            "name": "kettle",
+            "rotation": [
+                0,
+                0.13052619993686676,
+                0,
+                0.9914448857307434
+            ],
+            "scale": [
+                1,
+                0.5873788595199585,
+                1
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "doubleSided": true,
+            "name": "metal",
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0,
+                "roughnessFactor": 0.7012448310852051
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Cylinder.031",
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2
+                    },
+                    "indices": 3,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "images": [
+        {
+            "mimeType": "image/png",
+            "name": "metal",
+            "uri": "../textures/metal.png"
+        }
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5126,
+            "count": 456,
+            "max": [
+                0.9565964937210083,
+                1.8344990015029907,
+                1.1619837284088135
+            ],
+            "min": [
+                -1.0434033870697021,
+                -1.4140723943710327,
+                -1.5633907318115234
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 456,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 456,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5123,
+            "count": 816,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 5472,
+            "byteOffset": 0,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 5472,
+            "byteOffset": 5472,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 3648,
+            "byteOffset": 10944,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1632,
+            "byteOffset": 14592,
+            "target": 34963
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9728,
+            "minFilter": 9984
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 16224,
+            "uri": "kettle.bin"
+        }
+    ]
+}

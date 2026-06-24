@@ -1,0 +1,148 @@
+{
+    "asset": {
+        "generator": "Khronos glTF Blender I/O v5.1.18",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "scenes": [
+        {
+            "name": "Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "mesh": 0,
+            "name": "tree12",
+            "rotation": [
+                0.7071066498756409,
+                0,
+                0,
+                0.70710688829422
+            ],
+            "scale": [
+                0.04553123190999031,
+                0.04553123190999031,
+                0.04553123190999031
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "alphaMode": "BLEND",
+            "doubleSided": true,
+            "name": "tree12",
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "tree12",
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2
+                    },
+                    "indices": 3,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "images": [
+        {
+            "mimeType": "image/png",
+            "name": "tree12",
+            "uri": "../textures/tree12.png"
+        }
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5126,
+            "count": 105,
+            "max": [
+                300,
+                300.0000305175781,
+                617.5
+            ],
+            "min": [
+                -300,
+                -300,
+                -632.5
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 105,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 105,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5123,
+            "count": 156,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 1260,
+            "byteOffset": 0,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1260,
+            "byteOffset": 1260,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 840,
+            "byteOffset": 2520,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 312,
+            "byteOffset": 3360,
+            "target": 34963
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9728,
+            "minFilter": 9984
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 3672,
+            "uri": "tree12.bin"
+        }
+    ]
+}

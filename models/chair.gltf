@@ -1,0 +1,142 @@
+{
+    "asset": {
+        "generator": "Khronos glTF Blender I/O v5.1.18",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "scenes": [
+        {
+            "name": "Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "mesh": 0,
+            "name": "chair",
+            "scale": [
+                2.9815900325775146,
+                2.9815900325775146,
+                2.9815900325775146
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "doubleSided": true,
+            "name": "table",
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.41363635659217834,
+                "roughnessFactor": 0.7772727012634277
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Cube.016",
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2
+                    },
+                    "indices": 3,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "images": [
+        {
+            "mimeType": "image/png",
+            "name": "door",
+            "uri": "../textures/door.png"
+        }
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5126,
+            "count": 550,
+            "max": [
+                1.2606605291366577,
+                3.0408875942230225,
+                1
+            ],
+            "min": [
+                -1.1777786016464233,
+                -1.3324551582336426,
+                -1
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 550,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 550,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5123,
+            "count": 936,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 6600,
+            "byteOffset": 0,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 6600,
+            "byteOffset": 6600,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 4400,
+            "byteOffset": 13200,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1872,
+            "byteOffset": 17600,
+            "target": 34963
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9728,
+            "minFilter": 9984
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 19472,
+            "uri": "chair.bin"
+        }
+    ]
+}

@@ -1,0 +1,142 @@
+{
+    "asset": {
+        "generator": "Khronos glTF Blender I/O v5.1.18",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "scenes": [
+        {
+            "name": "Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "mesh": 0,
+            "name": "Juniper",
+            "rotation": [
+                0,
+                -0.7071068286895752,
+                0,
+                0.7071068286895752
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "doubleSided": true,
+            "name": "juniper",
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Sphere.002",
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2
+                    },
+                    "indices": 3,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "images": [
+        {
+            "mimeType": "image/png",
+            "name": "hat",
+            "uri": "../textures/hat.png"
+        }
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5126,
+            "count": 751,
+            "max": [
+                1.1865836381912231,
+                0.5837550759315491,
+                1.2206867933273315
+            ],
+            "min": [
+                -1.188987374305725,
+                -1.3581777811050415,
+                -1.831377625465393
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 751,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 751,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5123,
+            "count": 2556,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 9012,
+            "byteOffset": 0,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 9012,
+            "byteOffset": 9012,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 6008,
+            "byteOffset": 18024,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 5112,
+            "byteOffset": 24032,
+            "target": 34963
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9728,
+            "minFilter": 9984
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 29144,
+            "uri": "Juniper.bin"
+        }
+    ]
+}

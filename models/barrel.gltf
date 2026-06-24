@@ -1,0 +1,147 @@
+{
+    "asset": {
+        "generator": "Khronos glTF Blender I/O v5.1.18",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "scenes": [
+        {
+            "name": "Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "mesh": 0,
+            "name": "barrel",
+            "rotation": [
+                0.103645920753479,
+                -0.10364583134651184,
+                0.6994694471359253,
+                0.6994695663452148
+            ],
+            "scale": [
+                2.1738553047180176,
+                3.0264968872070312,
+                2.1738553047180176
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "doubleSided": true,
+            "name": "logs2",
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Cylinder.037",
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2
+                    },
+                    "indices": 3,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "images": [
+        {
+            "mimeType": "image/png",
+            "name": "logs2",
+            "uri": "../textures/logs2.png"
+        }
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5126,
+            "count": 520,
+            "max": [
+                1.0852724313735962,
+                0.8780632019042969,
+                1.1411229372024536
+            ],
+            "min": [
+                -1.0852724313735962,
+                -1.1219367980957031,
+                -1.1411229372024536
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 520,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 520,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5123,
+            "count": 828,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 6240,
+            "byteOffset": 0,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 6240,
+            "byteOffset": 6240,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 4160,
+            "byteOffset": 12480,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1656,
+            "byteOffset": 16640,
+            "target": 34963
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9728,
+            "minFilter": 9984
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 18296,
+            "uri": "barrel.bin"
+        }
+    ]
+}
