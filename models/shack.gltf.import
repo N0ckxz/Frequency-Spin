@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ccbo2wlrcdi1i"
-path="res://.godot/imported/shack.gltf-8de2e4a64ba4224d19153b74df6870c8.scn"
+uid="uid://20o5r5yy8d66"
+path="res://.godot/imported/Shack.gltf-b13b369562fe9666fc08c69155e8d80d.scn"
 
 [deps]
 
-source_file="res://models/shack.gltf"
-dest_files=["res://.godot/imported/shack.gltf-8de2e4a64ba4224d19153b74df6870c8.scn"]
+source_file="res://models/Shack.gltf"
+dest_files=["res://.godot/imported/Shack.gltf-b13b369562fe9666fc08c69155e8d80d.scn"]
 
 [params]
 
@@ -39,7 +39,16 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Floor": {
+"generate/physics": true
+},
+"PATH:Floor_001": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

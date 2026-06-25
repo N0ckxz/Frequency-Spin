@@ -8,28 +8,64 @@
         {
             "name": "Scene",
             "nodes": [
-                0
+                0,
+                1
             ]
         }
     ],
     "nodes": [
         {
             "mesh": 0,
+            "name": "furnaceLog",
+            "rotation": [
+                0.5085732340812683,
+                0.4911145269870758,
+                -0.5056322813034058,
+                0.49446535110473633
+            ],
+            "scale": [
+                0.16021546721458435,
+                0.06228814646601677,
+                0.16020919382572174
+            ],
+            "translation": [
+                0.6055521965026855,
+                3.0776596069335938,
+                2.85837459564209
+            ]
+        },
+        {
+            "mesh": 1,
             "name": "furnace",
             "scale": [
-                2.8177413940429688,
-                2.8177413940429688,
-                2.8177413940429688
+                0.32477766275405884,
+                0.32477766275405884,
+                0.32477766275405884
+            ],
+            "translation": [
+                0.6017403602600098,
+                0.08119519054889679,
+                2.770512342453003
             ]
         }
     ],
     "materials": [
         {
             "doubleSided": true,
-            "name": "furnace",
+            "name": "logs2",
             "pbrMetallicRoughness": {
                 "baseColorTexture": {
                     "index": 0
+                },
+                "metallicFactor": 0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "furnace",
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 1
                 },
                 "metallicFactor": 0,
                 "roughnessFactor": 0.7157676219940186
@@ -38,7 +74,7 @@
     ],
     "meshes": [
         {
-            "name": "Cube.005",
+            "name": "Cylinder.032",
             "primitives": [
                 {
                     "attributes": {
@@ -50,15 +86,38 @@
                     "material": 0
                 }
             ]
+        },
+        {
+            "name": "Cube.005",
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 4,
+                        "NORMAL": 5,
+                        "TEXCOORD_0": 6
+                    },
+                    "indices": 7,
+                    "material": 1
+                }
+            ]
         }
     ],
     "textures": [
         {
             "sampler": 0,
             "source": 0
+        },
+        {
+            "sampler": 0,
+            "source": 1
         }
     ],
     "images": [
+        {
+            "mimeType": "image/png",
+            "name": "logs2",
+            "uri": "../textures/logs2.png"
+        },
         {
             "mimeType": "image/png",
             "name": "furnace",
@@ -69,33 +128,67 @@
         {
             "bufferView": 0,
             "componentType": 5126,
-            "count": 390,
+            "count": 48,
             "max": [
-                2.876046657562256,
-                6.8782219886779785,
-                1.0487467050552368
+                1,
+                12.946040153503418,
+                1
             ],
             "min": [
-                -2.8760476112365723,
-                -3.2882282733917236,
-                -1.6556652784347534
+                -1,
+                -12.946040153503418,
+                -1
             ],
             "type": "VEC3"
         },
         {
             "bufferView": 1,
             "componentType": 5126,
-            "count": 390,
+            "count": 48,
             "type": "VEC3"
         },
         {
             "bufferView": 2,
             "componentType": 5126,
-            "count": 390,
+            "count": 48,
             "type": "VEC2"
         },
         {
             "bufferView": 3,
+            "componentType": 5123,
+            "count": 84,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 4,
+            "componentType": 5126,
+            "count": 392,
+            "max": [
+                2.876047134399414,
+                10.166450500488281,
+                1.405381202697754
+            ],
+            "min": [
+                -2.876047134399414,
+                0,
+                -1.2990312576293945
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 5,
+            "componentType": 5126,
+            "count": 392,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 6,
+            "componentType": 5126,
+            "count": 392,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 7,
             "componentType": 5123,
             "count": 960,
             "type": "SCALAR"
@@ -104,26 +197,50 @@
     "bufferViews": [
         {
             "buffer": 0,
-            "byteLength": 4680,
+            "byteLength": 576,
             "byteOffset": 0,
             "target": 34962
         },
         {
             "buffer": 0,
-            "byteLength": 4680,
-            "byteOffset": 4680,
+            "byteLength": 576,
+            "byteOffset": 576,
             "target": 34962
         },
         {
             "buffer": 0,
-            "byteLength": 3120,
-            "byteOffset": 9360,
+            "byteLength": 384,
+            "byteOffset": 1152,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 168,
+            "byteOffset": 1536,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 4704,
+            "byteOffset": 1704,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 4704,
+            "byteOffset": 6408,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 3136,
+            "byteOffset": 11112,
             "target": 34962
         },
         {
             "buffer": 0,
             "byteLength": 1920,
-            "byteOffset": 12480,
+            "byteOffset": 14248,
             "target": 34963
         }
     ],
@@ -135,7 +252,7 @@
     ],
     "buffers": [
         {
-            "byteLength": 14400,
+            "byteLength": 16168,
             "uri": "furnace.bin"
         }
     ]

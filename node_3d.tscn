@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://jnrct18h8ia6"]
-
-[ext_resource type="PackedScene" uid="uid://ccbo2wlrcdi1i" path="res://models/Shack.gltf" id="1_a202f"]
-
-[node name="Node3D" type="Node3D" unique_id=1188923712]
-
-[node name="Shack" parent="." unique_id=821261528 instance=ExtResource("1_a202f")]

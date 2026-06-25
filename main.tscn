@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://1gsnltw4p80v"]
+
+[ext_resource type="Shader" uid="uid://0t2gsos01ymi" path="res://shader/psx_post_process.gdshader" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://20o5r5yy8d66" path="res://models/Shack.gltf" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://cevyx6xe1j03y" path="res://first_person_camera.gd" id="3_h2yge"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
+sky_top_color = Color(0.52932394, 0.42708215, 0.33087096, 1)
+sky_horizon_color = Color(0.591069, 0.5608212, 0.5314932, 1)
+ground_bottom_color = Color(0.09611703, 0.0773677, 0.056266993, 1)
+ground_horizon_color = Color(0.591069, 0.5608212, 0.5314932, 1)
+
+[sub_resource type="Sky" id="Sky_h2yge"]
+sky_material = SubResource("ProceduralSkyMaterial_0xm2m")
+
+[sub_resource type="Environment" id="Environment_1bvp3"]
+background_mode = 2
+sky = SubResource("Sky_h2yge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h2yge"]
+shader = ExtResource("2_0xm2m")
+shader_parameter/viewport_size = Vector2(640, 480)
+shader_parameter/virtual_resolution = Vector2(320, 240)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u71dq"]
+
+[node name="Main" type="Node3D" unique_id=1680483815]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1684818914]
+environment = SubResource("Environment_1bvp3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1700733047]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=727703407]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1761912218]
+material = SubResource("ShaderMaterial_h2yge")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=776431607]
+script = ExtResource("3_h2yge")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=648094055]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_u71dq")
+
+[node name="TwistPivot" type="Node3D" parent="Player" unique_id=1990568935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+
+[node name="PitchPivot" type="Node3D" parent="Player/TwistPivot" unique_id=1451865117]
+
+[node name="Camera3D" type="Camera3D" parent="Player/TwistPivot/PitchPivot" unique_id=1213208419]
+
+[node name="Shack" parent="." unique_id=641924735 instance=ExtResource("3_1bvp3")]
