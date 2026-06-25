@@ -33,6 +33,8 @@ environment = SubResource("Environment_1bvp3")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
+[node name="Shack" parent="." unique_id=641924735 instance=ExtResource("3_1bvp3")]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=727703407]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1761912218]
@@ -57,5 +59,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 [node name="PitchPivot" type="Node3D" parent="Player/TwistPivot" unique_id=1451865117]
 
 [node name="Camera3D" type="Camera3D" parent="Player/TwistPivot/PitchPivot" unique_id=1213208419]
-
-[node name="Shack" parent="." unique_id=641924735 instance=ExtResource("3_1bvp3")]
