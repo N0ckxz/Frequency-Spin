@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://duxqxlwxpofpx"
+path="res://.godot/imported/rhythm click.mp3-6dda85c06ab77d79069f6e5ac7f114d5.mp3str"
+
+[deps]
+
+source_file="res://sfx/game jam sfx/rhythm click.mp3"
+dest_files=["res://.godot/imported/rhythm click.mp3-6dda85c06ab77d79069f6e5ac7f114d5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

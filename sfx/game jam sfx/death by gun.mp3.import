@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cisdynkhfyf6e"
+path="res://.godot/imported/death by gun.mp3-8bef70c46c023f6a06eeb05cc4c49e54.mp3str"
+
+[deps]
+
+source_file="res://sfx/game jam sfx/death by gun.mp3"
+dest_files=["res://.godot/imported/death by gun.mp3-8bef70c46c023f6a06eeb05cc4c49e54.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3ptkr7tdf1qy"
+path="res://.godot/imported/dial spin3 (new).mp3-0826fd6024ec4e98e30314c9e2859a8b.mp3str"
+
+[deps]
+
+source_file="res://sfx/game jam sfx/dial spin3 (new).mp3"
+dest_files=["res://.godot/imported/dial spin3 (new).mp3-0826fd6024ec4e98e30314c9e2859a8b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

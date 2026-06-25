@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfpst5m3we1ad"
+path="res://.godot/imported/telephone dial forward.mp3-81b441b94f50a5324615890c0e0a22ce.mp3str"
+
+[deps]
+
+source_file="res://sfx/game jam sfx/telephone dial forward.mp3"
+dest_files=["res://.godot/imported/telephone dial forward.mp3-81b441b94f50a5324615890c0e0a22ce.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

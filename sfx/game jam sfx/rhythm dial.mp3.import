@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://27rwk1kpge6a"
+path="res://.godot/imported/rhythm dial.mp3-99831cf913e9820b6079ee3dd2ddc537.mp3str"
+
+[deps]
+
+source_file="res://sfx/game jam sfx/rhythm dial.mp3"
+dest_files=["res://.godot/imported/rhythm dial.mp3-99831cf913e9820b6079ee3dd2ddc537.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

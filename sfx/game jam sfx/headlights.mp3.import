@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btxtn6chicdfb"
+path="res://.godot/imported/headlights.mp3-0c6f76fc219064c00467ca28ee50fbe7.mp3str"
+
+[deps]
+
+source_file="res://sfx/game jam sfx/headlights.mp3"
+dest_files=["res://.godot/imported/headlights.mp3-0c6f76fc219064c00467ca28ee50fbe7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

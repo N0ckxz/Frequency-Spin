@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c67y5btft5x1g"
+path="res://.godot/imported/reporting option selection.mp3-a729c53370b67a189bdaa2a6dd3243b6.mp3str"
+
+[deps]
+
+source_file="res://sfx/game jam sfx/reporting option selection.mp3"
+dest_files=["res://.godot/imported/reporting option selection.mp3-a729c53370b67a189bdaa2a6dd3243b6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

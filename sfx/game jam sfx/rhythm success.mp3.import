@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://twgngiji5hvt"
+path="res://.godot/imported/rhythm success.mp3-861154641da1f44f78abb45106580891.mp3str"
+
+[deps]
+
+source_file="res://sfx/game jam sfx/rhythm success.mp3"
+dest_files=["res://.godot/imported/rhythm success.mp3-861154641da1f44f78abb45106580891.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
