@@ -1,0 +1,11 @@
+~ hq_report
+HQ: This is HQ. We receive your transmission, Echo.
+HQ: You reported: "{{GameManager.last_report_text}}"
+HQ: We will relay this up the chain. Stay sharp.
+=> END
+
+~ pathfinder_report
+Pathfinder: Pathfinder here. Go ahead Echo.
+Pathfinder: You reported: "{{GameManager.last_report_text}}"
+Pathfinder: Copy that. We are adjusting our search pattern accordingly.
+=> END
