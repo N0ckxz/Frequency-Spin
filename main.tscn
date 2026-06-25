@@ -3,6 +3,8 @@
 [ext_resource type="Shader" uid="uid://0t2gsos01ymi" path="res://shader/psx_post_process.gdshader" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://20o5r5yy8d66" path="res://models/Shack.gltf" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://cevyx6xe1j03y" path="res://first_person_camera.gd" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bcr4w4tlhyyw7" path="res://models/ground.gltf" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://jwmou7sm1q6o" path="res://models/wall_002.gltf" id="5_lquwl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_top_color = Color(0.52932394, 0.42708215, 0.33087096, 1)
@@ -59,3 +61,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 [node name="PitchPivot" type="Node3D" parent="Player/TwistPivot" unique_id=1451865117]
 
 [node name="Camera3D" type="Camera3D" parent="Player/TwistPivot/PitchPivot" unique_id=1213208419]
+
+[node name="ground2" parent="." unique_id=1895230132 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3, -5.4, 48.3)
+
+[node name="wall_0022" parent="." unique_id=446021922 instance=ExtResource("5_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3, 0, 0)
