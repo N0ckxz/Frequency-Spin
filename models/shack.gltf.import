@@ -47,6 +47,12 @@ _subresources={
 "PATH:Floor_001": {
 "generate/physics": true
 },
+"PATH:Platform": {
+"generate/physics": true
+},
+"PATH:ceiling": {
+"generate/physics": true
+},
 "PATH:leftWall": {
 "generate/physics": true
 },
