@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://33w2dty16380"]
+
+[ext_resource type="PackedScene" uid="uid://20o5r5yy8d66" path="res://models/Shack.gltf" id="1_i4wrx"]
+[ext_resource type="PackedScene" uid="uid://jwmou7sm1q6o" path="res://models/floor.gltf" id="2_n6o5i"]
+[ext_resource type="PackedScene" uid="uid://bcr4w4tlhyyw7" path="res://models/ground.gltf" id="3_gnsb0"]
+[ext_resource type="PackedScene" uid="uid://bojo7ff7v4acp" path="res://main_menu.tscn" id="4_ibaye"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y4h4p"]
+sky_top_color = Color(0.52932394, 0.42708215, 0.33087096, 1)
+sky_horizon_color = Color(0.591069, 0.5608212, 0.5314932, 1)
+ground_bottom_color = Color(0.09611703, 0.0773677, 0.056266993, 1)
+ground_horizon_color = Color(0.591069, 0.5608212, 0.5314932, 1)
+
+[sub_resource type="Sky" id="Sky_h2yge"]
+sky_material = SubResource("ProceduralSkyMaterial_y4h4p")
+
+[sub_resource type="Environment" id="Environment_hew1e"]
+background_mode = 2
+background_color = Color(0.071689285, 0.15043706, 0.13727686, 1)
+sky = SubResource("Sky_h2yge")
+
+[node name="MenuScene" type="Node3D" unique_id=991798395]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1052504644]
+transform = Transform3D(0.6427875, 0, 0.7660446, 0, 1, 0, -0.7660446, 0, 0.6427875, 12, 3, 7)
+
+[node name="menu" type="CanvasLayer" parent="." unique_id=1755074867]
+
+[node name="MainMenu" parent="menu" unique_id=1056372484 instance=ExtResource("4_ibaye")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1622675783]
+environment = SubResource("Environment_hew1e")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1634930473]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0.15816873, 0.12368583, 0.071297355, 1)
+light_energy = 1.592
+light_indirect_energy = 0.555
+shadow_enabled = true
+
+[node name="Shack" parent="." unique_id=1474067394 instance=ExtResource("1_i4wrx")]
+
+[node name="wall_0022" parent="." unique_id=117842329 instance=ExtResource("2_n6o5i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3, 0, 0)
+
+[node name="ground2" parent="." unique_id=395637142 instance=ExtResource("3_gnsb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3, -5.4, 48.3)

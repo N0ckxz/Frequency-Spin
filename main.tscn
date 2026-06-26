@@ -4,7 +4,18 @@
 [ext_resource type="PackedScene" uid="uid://20o5r5yy8d66" path="res://models/Shack.gltf" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://cevyx6xe1j03y" path="res://first_person_camera.gd" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bcr4w4tlhyyw7" path="res://models/ground.gltf" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://jwmou7sm1q6o" path="res://models/wall_002.gltf" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://jwmou7sm1q6o" path="res://models/floor.gltf" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cjx3vgvn451cs" path="res://models/door.gltf" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://chme7vtraptpl" path="res://models/furnace.gltf" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://dkru57mmk0k8e" path="res://models/carpet.gltf" id="8_5vw27"]
+[ext_resource type="PackedScene" uid="uid://bl2m1w6ank217" path="res://models/pot.gltf" id="9_4c57u"]
+[ext_resource type="PackedScene" uid="uid://b206k4u1b8cox" path="res://models/kettle.gltf" id="10_efxa6"]
+[ext_resource type="PackedScene" uid="uid://bf51tu72wugoc" path="res://models/cloth.gltf" id="11_dg77c"]
+[ext_resource type="PackedScene" uid="uid://ksr0albl5kky" path="res://models/Juniper.gltf" id="12_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://dkk8wa3cf6ejx" path="res://models/table.gltf" id="13_vivmo"]
+[ext_resource type="PackedScene" uid="uid://bthvcoxnttkrw" path="res://models/chair.gltf" id="14_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://355w1tut34v5" path="res://models/barrel.gltf" id="15_yaehf"]
+[ext_resource type="PackedScene" uid="uid://dlt8goa8w3gtn" path="res://models/crate.gltf" id="16_2cqfq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_top_color = Color(0.52932394, 0.42708215, 0.33087096, 1)
@@ -12,13 +23,13 @@ sky_horizon_color = Color(0.591069, 0.5608212, 0.5314932, 1)
 ground_bottom_color = Color(0.09611703, 0.0773677, 0.056266993, 1)
 ground_horizon_color = Color(0.591069, 0.5608212, 0.5314932, 1)
 
-[sub_resource type="Sky" id="Sky_h2yge"]
+[sub_resource type="Sky" id="Sky_lquwl"]
 sky_material = SubResource("ProceduralSkyMaterial_0xm2m")
 
 [sub_resource type="Environment" id="Environment_1bvp3"]
 background_mode = 2
 background_color = Color(0.071689285, 0.15043706, 0.13727686, 1)
-sky = SubResource("Sky_h2yge")
+sky = SubResource("Sky_lquwl")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h2yge"]
 shader = ExtResource("2_0xm2m")
@@ -41,9 +52,15 @@ shadow_enabled = true
 
 [node name="Shack" parent="." unique_id=641924735 instance=ExtResource("3_1bvp3")]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=727703407]
+[node name="wall_0022" parent="." unique_id=446021922 instance=ExtResource("5_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3, 0, 0)
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1761912218]
+[node name="ground2" parent="." unique_id=1895230132 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3, -5.4, 48.3)
+
+[node name="Shader" type="CanvasLayer" parent="." unique_id=727703407]
+
+[node name="ColorRect" type="ColorRect" parent="Shader" unique_id=1761912218]
 material = SubResource("ShaderMaterial_h2yge")
 anchors_preset = 15
 anchor_right = 1.0
@@ -60,14 +77,49 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_u71dq")
 
 [node name="TwistPivot" type="Node3D" parent="Player" unique_id=1990568935]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.7, 0)
 
 [node name="PitchPivot" type="Node3D" parent="Player/TwistPivot" unique_id=1451865117]
 
 [node name="Camera3D" type="Camera3D" parent="Player/TwistPivot/PitchPivot" unique_id=1213208419]
 
-[node name="ground2" parent="." unique_id=1895230132 instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3, -5.4, 48.3)
+[node name="door2" parent="." unique_id=1038191357 instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3, 1.8000001, -1.7)
 
-[node name="wall_0022" parent="." unique_id=446021922 instance=ExtResource("5_lquwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3, 0, 0)
+[node name="furnace2" parent="." unique_id=124707397 instance=ExtResource("7_272bh")]
+
+[node name="carpet2" parent="." unique_id=455375793 instance=ExtResource("8_5vw27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.12168081, 0)
+
+[node name="pot2" parent="." unique_id=58828110 instance=ExtResource("9_4c57u")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 0.70000005, 0.5445178, 2.6000001)
+
+[node name="kettle2" parent="." unique_id=1713976348 instance=ExtResource("10_efxa6")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 1.4144961, 1.9499776, 2.6678145)
+
+[node name="cloth2" parent="." unique_id=1868108066 instance=ExtResource("11_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 1.7, 1.3)
+
+[node name="Juniper2" parent="." unique_id=1465223316 instance=ExtResource("12_ycdy4")]
+transform = Transform3D(-0.66922194, -0.31654495, 0.6722658, -0.40822002, 0.9125853, 0.023330672, -0.62088513, -0.25881907, -0.73994213, -0.30168405, 1.9525566, 2.6000001)
+
+[node name="table2" parent="." unique_id=454924218 instance=ExtResource("13_vivmo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.8, -2.2273228)
+
+[node name="chair2" parent="." unique_id=1072632526 instance=ExtResource("14_2cqfq")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -2.3000002, 0.6, -1.2)
+
+[node name="barrel2" parent="." unique_id=2113876522 instance=ExtResource("15_yaehf")]
+transform = Transform3D(1, 0, 0, 0, 0.9396926, -0.34202012, 0, 0.34202012, 0.9396926, -2.4, 0.38393787, 2.8)
+
+[node name="barrel3" parent="barrel2" unique_id=1560504177 instance=ExtResource("15_yaehf")]
+transform = Transform3D(1, 0, 0, 0, 0.7071069, -0.70710695, 0, 0.70710695, 0.7071069, 0, -0.19779825, -0.5434458)
+
+[node name="barrel2" parent="barrel2" unique_id=51622428 instance=ExtResource("15_yaehf")]
+transform = Transform3D(1, 0, 0, 0, -0.17364833, 0.9848083, 0, -0.9848083, -0.17364833, 0, 0.35849273, -0.42666578)
+
+[node name="crate2" parent="." unique_id=1850180832 instance=ExtResource("16_2cqfq")]
+transform = Transform3D(0.54082733, 0, 0.453808, 0, 0.706, 0, -0.453808, 0, 0.54082733, 3.7, 0.47948158, 2.6000001)
+
+[node name="crate2" parent="crate2" unique_id=747582304 instance=ExtResource("16_2cqfq")]
+transform = Transform3D(0.9659256, 0, 0.25881904, 0, 0.9999999, 0, -0.25881904, 0, 0.9659256, 0, 1.0132542, 0)

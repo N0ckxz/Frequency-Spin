@@ -1,0 +1,41 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://d5r4c7w8ll4"
+path="res://.godot/imported/ZTOtez-Regular.ttf-b3a51b8d544b8c77ab8e94e81315dc6b.fontdata"
+
+[deps]
+
+source_file="res://fonts/ZTOtez-Regular.ttf"
+dest_files=["res://.godot/imported/ZTOtez-Regular.ttf-b3a51b8d544b8c77ab8e94e81315dc6b.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=0
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+modulate_color_glyphs=false
+hinting=3
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(16, 0)
+}]
+language_support={}
+script_support={}
+opentype_features={}

@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://bojo7ff7v4acp"]
 
+[ext_resource type="Script" uid="uid://covxic3fas8s4" path="res://pivot.gd" id="1_06t4h"]
+[ext_resource type="FontFile" uid="uid://dbdoxypdmigo1" path="res://fonts/dealerplate california.otf" id="2_7vrkn"]
+
 [node name="MainMenu" type="Control" unique_id=1056372484]
 layout_mode = 3
 anchors_preset = 15
@@ -8,17 +11,65 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="." unique_id=1056253371]
+[node name="Pivot" type="Control" parent="." unique_id=14941072]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -77.5
-offset_top = -23.0
-offset_right = 77.5
-offset_bottom = 23.0
-grow_horizontal = 2
+offset_left = -180.0
+offset_right = -140.0
+offset_bottom = 40.0
 grow_vertical = 2
-text = "Start"
+script = ExtResource("1_06t4h")
+
+[node name="Play" type="Label" parent="Pivot" unique_id=336881795]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.500001
+offset_right = 82.0
+offset_bottom = 11.500001
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 40
+text = "Play"
+
+[node name="Settings" type="Label" parent="Pivot" unique_id=1114698118]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.500001
+offset_right = 62.0
+offset_bottom = 11.500001
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 40
+text = "Settings"
+
+[node name="Credits" type="Label" parent="Pivot" unique_id=358669740]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.5
+offset_right = 122.0
+offset_bottom = 20.5
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 40
+text = "Credits"
+
+[node name="Quit" type="Label" parent="Pivot" unique_id=1256912279]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 84.0
+offset_bottom = 35.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 40
+text = "Quit"
