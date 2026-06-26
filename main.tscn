@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dlt8goa8w3gtn" path="res://models/crate.gltf" id="16_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://bd1bi7viyqaic" path="res://models/lamp.gltf" id="17_yaehf"]
 [ext_resource type="PackedScene" uid="uid://dh66gbqbkwoub" path="res://lamp_2.tscn" id="18_074og"]
+[ext_resource type="PackedScene" uid="uid://genjo6bwhenn" path="res://models/lightbulb.gltf" id="19_cegan"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h2yge"]
 shader = ExtResource("2_0xm2m")
@@ -41,15 +42,42 @@ glow_enabled = true
 glow_intensity = 1.99
 glow_bloom = 0.05
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u71dq"]
+[sub_resource type="Curve" id="Curve_074og"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.53429604, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.48076916), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_074og"]
+curve = SubResource("Curve_074og")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ohaee"]
+emission_shape = 3
+emission_box_extents = Vector3(3.495, 2.18, 3.01)
+gravity = Vector3(0, -0.1, 0)
+tangential_accel_min = -2.2351742e-06
+tangential_accel_max = -2.2351742e-06
+scale_min = 0.01
+scale_max = 0.19
+scale_curve = SubResource("CurveTexture_074og")
+
+[sub_resource type="Gradient" id="Gradient_074og"]
+offsets = PackedFloat32Array(0, 0.52380955)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_48e2i"]
+gradient = SubResource("Gradient_074og")
+fill = 2
+fill_from = Vector2(0.5105263, 0.50526315)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2l4qf"]
-albedo_color = Color(0.3820329, 0.23658821, 0.08161063, 1)
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = SubResource("GradientTexture2D_48e2i")
 
 [sub_resource type="QuadMesh" id="QuadMesh_u71dq"]
 material = SubResource("StandardMaterial3D_2l4qf")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u71dq"]
 
 [node name="Main" type="Node3D" unique_id=1680483815]
 
@@ -73,6 +101,14 @@ light_color = Color(0.15816873, 0.12368583, 0.071297355, 1)
 light_energy = 1.592
 light_indirect_energy = 0.555
 shadow_enabled = true
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1407345355]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6538222, 2.3000002, 0)
+amount = 10
+transform_align = 1
+transform_align_channel_filter = 1
+process_material = SubResource("ParticleProcessMaterial_ohaee")
+draw_pass_1 = SubResource("QuadMesh_u71dq")
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=776431607]
 script = ExtResource("3_h2yge")
@@ -137,13 +173,21 @@ transform = Transform3D(0.54082733, 0, 0.453808, 0, 0.706, 0, -0.453808, 0, 0.54
 [node name="crate2" parent="crate2" unique_id=747582304 instance=ExtResource("16_2cqfq")]
 transform = Transform3D(0.9659256, 0, 0.25881904, 0, 0.9999999, 0, -0.25881904, 0, 0.9659256, 0, 1.0132542, 0)
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1407345355]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3000002, 0)
-process_material = SubResource("ParticleProcessMaterial_ohaee")
-draw_pass_1 = SubResource("QuadMesh_u71dq")
-
 [node name="lamp2" parent="." unique_id=820104597 instance=ExtResource("17_yaehf")]
 transform = Transform3D(0.7071068, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.7071068, -1.6999999, 1.3784378, -1.6999999)
 
 [node name="lamp3" parent="." unique_id=763323109 instance=ExtResource("18_074og")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6911821, 1.4093558, -2.0677755)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1087321835]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.4755075, 2.7091813, 0)
+light_color = Color(0.7902668, 0.6122282, 0.42333117, 1)
+light_energy = 16.0
+light_indirect_energy = 3.326
+light_volumetric_fog_energy = 1.744
+spot_range = 22.357
+spot_attenuation = 0.53
+spot_angle = 64.88
+
+[node name="lightbulb2" parent="." unique_id=110940350 instance=ExtResource("19_cegan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4723358, 2.8, 0)

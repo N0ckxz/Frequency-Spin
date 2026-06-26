@@ -1,9 +1,24 @@
 [gd_scene format=3 uid="uid://33w2dty16380"]
 
 [ext_resource type="PackedScene" uid="uid://20o5r5yy8d66" path="res://models/Shack.gltf" id="1_i4wrx"]
+[ext_resource type="Shader" uid="uid://0t2gsos01ymi" path="res://shader/psx_post_process.gdshader" id="2_lrwt8"]
 [ext_resource type="PackedScene" uid="uid://jwmou7sm1q6o" path="res://models/floor.gltf" id="2_n6o5i"]
 [ext_resource type="PackedScene" uid="uid://bcr4w4tlhyyw7" path="res://models/ground.gltf" id="3_gnsb0"]
 [ext_resource type="PackedScene" uid="uid://bojo7ff7v4acp" path="res://main_menu.tscn" id="4_ibaye"]
+[ext_resource type="PackedScene" uid="uid://cjx3vgvn451cs" path="res://models/door.gltf" id="6_2h7ur"]
+[ext_resource type="PackedScene" uid="uid://chme7vtraptpl" path="res://models/furnace.gltf" id="7_pjlug"]
+[ext_resource type="PackedScene" uid="uid://dkru57mmk0k8e" path="res://models/carpet.gltf" id="8_h3eto"]
+[ext_resource type="PackedScene" uid="uid://bl2m1w6ank217" path="res://models/pot.gltf" id="9_6f4w3"]
+[ext_resource type="PackedScene" uid="uid://b206k4u1b8cox" path="res://models/kettle.gltf" id="10_bapj5"]
+[ext_resource type="PackedScene" uid="uid://bf51tu72wugoc" path="res://models/cloth.gltf" id="11_ohycj"]
+[ext_resource type="PackedScene" uid="uid://ksr0albl5kky" path="res://models/Juniper.gltf" id="12_g4igg"]
+[ext_resource type="PackedScene" uid="uid://dkk8wa3cf6ejx" path="res://models/table.gltf" id="13_q1b70"]
+[ext_resource type="PackedScene" uid="uid://bthvcoxnttkrw" path="res://models/chair.gltf" id="14_kec56"]
+[ext_resource type="PackedScene" uid="uid://355w1tut34v5" path="res://models/barrel.gltf" id="15_v7q8m"]
+[ext_resource type="PackedScene" uid="uid://dlt8goa8w3gtn" path="res://models/crate.gltf" id="16_qnsw5"]
+[ext_resource type="PackedScene" uid="uid://bd1bi7viyqaic" path="res://models/lamp.gltf" id="17_6bnsu"]
+[ext_resource type="PackedScene" uid="uid://dh66gbqbkwoub" path="res://lamp_2.tscn" id="18_y55js"]
+[ext_resource type="PackedScene" uid="uid://genjo6bwhenn" path="res://models/lightbulb.gltf" id="19_pnwiq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y4h4p"]
 sky_top_color = Color(0.52932394, 0.42708215, 0.33087096, 1)
@@ -19,14 +34,52 @@ background_mode = 2
 background_color = Color(0.071689285, 0.15043706, 0.13727686, 1)
 sky = SubResource("Sky_h2yge")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mb4ur"]
+shader = ExtResource("2_lrwt8")
+shader_parameter/viewport_size = Vector2(640, 480)
+shader_parameter/virtual_resolution = Vector2(320, 240)
+
+[sub_resource type="Curve" id="Curve_0q7h5"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.53429604, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.48076916), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_074og"]
+curve = SubResource("Curve_0q7h5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bhvvd"]
+emission_shape = 3
+emission_box_extents = Vector3(3.495, 2.18, 3.01)
+gravity = Vector3(0, -0.1, 0)
+tangential_accel_min = -2.2351742e-06
+tangential_accel_max = -2.2351742e-06
+scale_min = 0.01
+scale_max = 0.19
+scale_curve = SubResource("CurveTexture_074og")
+
+[sub_resource type="Gradient" id="Gradient_074og"]
+offsets = PackedFloat32Array(0, 0.52380955)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_va4jk"]
+gradient = SubResource("Gradient_074og")
+fill = 2
+fill_from = Vector2(0.5105263, 0.50526315)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2l4qf"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = SubResource("GradientTexture2D_va4jk")
+
+[sub_resource type="QuadMesh" id="QuadMesh_xqkhl"]
+material = SubResource("StandardMaterial3D_2l4qf")
+
 [node name="MenuScene" type="Node3D" unique_id=991798395]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1052504644]
 transform = Transform3D(0.6427875, 0, 0.7660446, 0, 1, 0, -0.7660446, 0, 0.6427875, 12, 3, 7)
 
 [node name="menu" type="CanvasLayer" parent="." unique_id=1755074867]
-
-[node name="MainMenu" parent="menu" unique_id=1056372484 instance=ExtResource("4_ibaye")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1622675783]
 environment = SubResource("Environment_hew1e")
@@ -38,10 +91,98 @@ light_energy = 1.592
 light_indirect_energy = 0.555
 shadow_enabled = true
 
-[node name="Shack" parent="." unique_id=1474067394 instance=ExtResource("1_i4wrx")]
+[node name="MainMenu" parent="." unique_id=1056372484 instance=ExtResource("4_ibaye")]
 
-[node name="wall_0022" parent="." unique_id=117842329 instance=ExtResource("2_n6o5i")]
+[node name="Shader" type="CanvasLayer" parent="." unique_id=1332276812]
+
+[node name="ColorRect" type="ColorRect" parent="Shader" unique_id=217829671]
+material = SubResource("ShaderMaterial_mb4ur")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=21669173]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0.15816873, 0.12368583, 0.071297355, 1)
+light_energy = 1.592
+light_indirect_energy = 0.555
+shadow_enabled = true
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1458645730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6538222, 2.3000002, 0)
+amount = 10
+transform_align = 1
+transform_align_channel_filter = 1
+process_material = SubResource("ParticleProcessMaterial_bhvvd")
+draw_pass_1 = SubResource("QuadMesh_xqkhl")
+
+[node name="Shack" parent="." unique_id=1434618456 instance=ExtResource("1_i4wrx")]
+
+[node name="wall_0022" parent="." unique_id=1120262535 instance=ExtResource("2_n6o5i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3, 0, 0)
 
 [node name="ground2" parent="." unique_id=395637142 instance=ExtResource("3_gnsb0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3, -5.4, 48.3)
+
+[node name="door2" parent="." unique_id=1068143714 instance=ExtResource("6_2h7ur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3, 1.8000001, -1.7)
+
+[node name="furnace2" parent="." unique_id=778602616 instance=ExtResource("7_pjlug")]
+
+[node name="carpet2" parent="." unique_id=455375793 instance=ExtResource("8_h3eto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.12168081, 0)
+
+[node name="pot2" parent="." unique_id=606182435 instance=ExtResource("9_6f4w3")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 0.70000005, 0.5445178, 2.6000001)
+
+[node name="kettle2" parent="." unique_id=1255351358 instance=ExtResource("10_bapj5")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 1.4144961, 1.9499776, 2.6678145)
+
+[node name="cloth2" parent="." unique_id=1868108066 instance=ExtResource("11_ohycj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 1.7, 1.3)
+
+[node name="Juniper2" parent="." unique_id=1465223316 instance=ExtResource("12_g4igg")]
+transform = Transform3D(-0.66922194, -0.31654495, 0.6722658, -0.40822002, 0.9125853, 0.023330672, -0.62088513, -0.25881907, -0.73994213, -0.30168405, 1.9525566, 2.6000001)
+
+[node name="table2" parent="." unique_id=1065198400 instance=ExtResource("13_q1b70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.8, -2.2273228)
+
+[node name="chair2" parent="." unique_id=504344091 instance=ExtResource("14_kec56")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -2.3000002, 0.6, -1.2)
+
+[node name="barrel2" parent="." unique_id=223145376 instance=ExtResource("15_v7q8m")]
+transform = Transform3D(0.81915206, 0.1961747, 0.53898555, 0, 0.93969274, -0.34202015, -0.5735765, 0.28016654, 0.76975125, -2.1000001, 0.38393787, 2.8)
+
+[node name="barrel2" parent="barrel2" unique_id=727475200 instance=ExtResource("15_v7q8m")]
+transform = Transform3D(-1, -2.990036e-08, -8.2150564e-08, 2.9900352e-08, 0.76604503, -0.6427881, 8.2150564e-08, -0.64278805, -0.76604486, 0.099999905, 0.30808818, -0.43138814)
+
+[node name="barrel3" parent="barrel2" unique_id=1980425726 instance=ExtResource("15_v7q8m")]
+transform = Transform3D(1, 0, 0, 0, -0.99995244, -0.00978291, 0, 0.00978291, -0.99995244, 0, -0.20521235, -0.5638155)
+
+[node name="crate2" parent="." unique_id=1852232323 instance=ExtResource("16_qnsw5")]
+transform = Transform3D(0.54082733, 0, 0.453808, 0, 0.706, 0, -0.453808, 0, 0.54082733, 3.7, 0.47948158, 2.6000001)
+
+[node name="crate2" parent="crate2" unique_id=1974119884 instance=ExtResource("16_qnsw5")]
+transform = Transform3D(0.9659256, 0, 0.25881904, 0, 0.9999999, 0, -0.25881904, 0, 0.9659256, 0, 1.0132542, 0)
+
+[node name="lamp2" parent="." unique_id=763323109 instance=ExtResource("17_6bnsu")]
+transform = Transform3D(0.7071068, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.7071068, -1.6999999, 1.3784378, -1.6999999)
+
+[node name="lamp3" parent="." unique_id=1077670566 instance=ExtResource("18_y55js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6911821, 1.4093558, -2.0677755)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1770907023]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.4755075, 2.7091813, 0)
+light_color = Color(0.7902668, 0.6122282, 0.42333117, 1)
+light_energy = 16.0
+light_indirect_energy = 3.326
+light_volumetric_fog_energy = 1.744
+spot_range = 22.357
+spot_attenuation = 0.53
+spot_angle = 64.88
+
+[node name="lightbulb2" parent="." unique_id=110940350 instance=ExtResource("19_pnwiq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4723358, 2.8, 0)

@@ -6,6 +6,8 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xkt5l"]
 albedo_texture = ExtResource("2_npehg")
+emission_enabled = true
+emission = Color(0.7539839, 0.75398386, 0.75398386, 1)
 texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6gk8a"]
